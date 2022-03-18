@@ -129,6 +129,9 @@
       text-align: center;
 
     }
+    #order, #overlay{
+      height: auto;
+    }
   }
 
 
