@@ -79,7 +79,7 @@
   background-color: orange;
 }
 #overlay{
-  height: 80vh;
+  height: 85vh;
     background-color: rgba(0, 0, 0, 0.8);
     margin-top: 20px;
     margin-left: 2%;
@@ -94,6 +94,11 @@
     /* background-color: green; */
     /* color: white; */
     margin-top: 30px;
+  }
+  #send{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: green;
   }
   #pizza, #topping, #crust, #quantity{
     width: 400px;
