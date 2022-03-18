@@ -80,6 +80,7 @@
   font-size: 20px;
   border-radius: 15px 15px 0px 15px;
   background-color: orange;
+  font-size: 25px;
 }
 #overlay{
   height: 85vh;
@@ -97,6 +98,7 @@
     /* background-color: green; */
     /* color: white; */
     margin-top: 30px;
+    flex-wrap: wrap;
   }
   #send, #neworder{
     border-radius: 5px;
@@ -118,3 +120,30 @@
   .grandorder{
     color: green;
   }
+
+  @media only screen and (max-width: 400px){
+    .imall{
+      height: 200px;
+      width: 300px;
+      margin-left: -200px;
+      text-align: center;
+
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
