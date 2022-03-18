@@ -84,26 +84,29 @@ $(document).ready(function(){
 
     });
     //final order button 
-    $("#grandorder").click(function(e){
-        e.preventDefault();
-
-        var grandTotal = totalCost + 180;
+    $("#finalorder").click(function(e){
+    
         $("#home").hide();
         $(".display").hide();
         $(".checkout").hide();
         $(".userdeliver").hide();
         $("#neworder").hide();
+        var grandTotal = totalCost + 180;
 
         let customer = $("input#name").val();
         let phone = $("input#phone").val();
         let location = $("input#location").val();
 
-        if ($("input#name").val() || $("input#phone").val() || $("input#location").val() ==""){
+        if (customer == "" || phone == "" || location ==""){
             alert("Fields should not be empty");
             
+            
           }else{
-
+            $(".userdeliver").hide();
+            $(".grandorder").append("Thank you "+ customer +", We have recieved your order details and your request will be delivered to "+location+ 
+            ". Prepare sh. "+grandTotal);
           }
+          e.preventDefault();
 
     });
 });
