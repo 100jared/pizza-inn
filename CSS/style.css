@@ -97,6 +97,7 @@
   }
   #pizza, #topping, #crust, #quantity{
     width: 400px;
+    height: 40px;
     padding: 4px;
   }
   .display{
