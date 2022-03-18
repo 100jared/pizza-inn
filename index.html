@@ -87,47 +87,40 @@
   
   <div class="row">
     <div class="col-sm-6">
-      <form action="">
+      <form action="" id="myForm">
         <label for="pizza">Choose Pizza size*</label><br>
         <select name="pizza" id="pizza">
-          <option value="small">Small -- @ sh 500</option>
-          <option value="medium">Medium -- @ sh 700</option>
-          <option value="large">Large -- @ sh 500</option>
+          <option value="500">Small -- @ sh 500</option>
+          <option value="700">Medium -- @ sh 700</option>
+          <option value="900">Large -- @ sh 900</option>
         </select><br><br>
 
         <label for="pizza">Favourite Crust*</label><br>
         <select name="crust" id="crust">
-          <option value="crispy">Crispy -- @ sh 150</option>
-          <option value="stuffed">Stuffed --@ sh 200</option>
-          <option value="gluten">Gluten-free --@ sh 250</option>
+          <option value="150">Crispy -- @ sh 150</option>
+          <option value="200">Stuffed --@ sh 200</option>
+          <option value="250">Gluten-free --@ sh 250</option>
         </select><br><br>
         <p>Each of the toppings below is sh 60</p>
-        <div class="row mt-2">
-        <div class="form-check form-check-inline mx-3">
-            <input class="form-check-input" type="checkbox" id="bacon" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Bacons</label>
-        </div>    
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="chicken" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Chicken</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="sausage" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Sausage</label>
-          </div>
-           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="green" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Green Pepper</label>
-          </div>
-        </div><br>
-        <label for="quantity">Quantity</label><br>
-        <input type="number" min="1" required><br><br>
-        <button type="submit" id="send">Submit</button>
+        <select name="crust" id="topping">
+          <option value="60">Bacon -- @ sh 60</option>
+          <option value="60">Chicken --@ sh 60</option>
+          <option value="60">Sausage --@ sh 60</option>
+          <option value="120">Bacon & chicken-- @ sh 120</option>
+          <option value="120">Bacon & sausage-- @ sh 120</option>
+          <option value="120">Chicken & sausage-- @ sh 120</option>
+          <option value="180">Bacon & chicken & sausage-- @ sh 180</option>
+        </select><br>
+       <label for="quantity">Quantity</label><br>
+        <input type="number" id="quantity" min="1" required><br><br>
+        <button type="submit" id="send">Place Order</button>
 
 
       </form>
     </div>
-    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+    <p id="display"></p>
+    </div>
   </div>
  </div>
 </div>
@@ -164,8 +157,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   </body>
