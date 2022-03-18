@@ -1,7 +1,7 @@
-# Delani studio
+# Pizz Inn.
 
 ##### Developed By [Gilbert Korir](https://100jared.github.io/my-portfolio/).
-### This is a website for Delani Studio showing its services and a form to reach out to them.
+#### This is a web application where customers order different sizes of pizzas with one or more toppings and the crust they wish.
 
 ## Table of Content
 
@@ -20,9 +20,10 @@
 
 ## Description
 
-<p align="center">This is a Delani studio website built with HTML, CSS, Bootstrap, JavaScript & jQuery. The website showcases a Landing Page, About Us, Services, Project Portfolio, Contact Form and contact links.</p>
+<p align="center">This is a simple Pizza webpage that uses objects in making orders and making basic calculation on delvery and the type of Pizza the user will choose Bootstrap Jquery JS
+The project will make use of jquery library to make the page dynamic and more responsive with bootstrap</p>
 
-<p align="center"><img src="https://github.com/100jared/Delani-studio/blob/master/images/bg.jpg" height="300px" width = "70%"> </p>
+<p align="center"><img src="" height="300px" width = "70%"> </p>
   
  ---
 
@@ -32,18 +33,18 @@
 
 * Get connected to an internet.
   
-* Here is the live link: https://100jared.github.io/Delani-studio/
+* Here is the live link: 
 
 ## Set-up-instructions
 
 * Clone this repository to a location in your file system. 
-`git clone https://github.com/100jared/Delani-studio.git`
+`git clone https://github.com/100jared/pizza-inn.git`
 
-* Open terminal command line then navigate to the root folder using: `cd Delani-studio`
+* Open terminal command line then navigate to the root folder using: `cd pizza-inn`
 
 * Load the `index.html` on your Browser
 
-[Back to the top](#delani-studio)
+[Back to the top](#pizz-inn)
 
 ## Technology Used
 
@@ -58,28 +59,28 @@
 
 * HTML and Vanilla CSS, Bootstrap, JavaScript and jQuery.
 
-[Back to the top](#delani-studio)
+[Back to the top](#pizz-inn)
 
 ## Features and BDD
 
- Behaviour      | Input        | Output       |
+"
+|Buttons     | Input        | Results       |
 | :------------- | :----------: | -----------: |
-|  Select pizza flavor  |   Chiken Tika |   Chicken Tika   |
-| Select piza size  | large, medium, small |  large  |
+| Select piza size  | large, medium, small |  any  |
 | Select Crust   |  Either cripsy,stuffed or glutten-free  |     |
-| select toppings  |  check all the topppings you want     |     |
-| Press Proceed button |     | Table with your selections with the total price for that selection.|
-| Press add pizza button | pizza flavor,size, crust and toppings   | new selection added to the table|
-| Press Checkout |     | Your bill is ...  |
-| Press home delivery | Your name, phone number and delivery location     |  |
-| press place order| | We have recieved your order and it will be delivered to you with your name, place of delivery and amount to be paid.|
+| select toppings  |       |     |
+| click place order button |     | an append with the total bill.|
+| click delivery button | you encounter a form for filling your detailes  | alert is given for sh 180|
+| click order button |     | Total bill plus delivery cost.  |
+| click checkout button | your total bill minus delivery cost     |  |
+| click place new order| | refreshes the page and takes you to your new order.|
 
 ## Licence
 [MIT LICENSE](https://github.com/100jared/Delani-studio/blob/master/LICENSE) <p>Gilbert korir &copy; 2022</p>
 
 
 
-[Go Back to the top](#delani-studio)
+[Go Back to the top](#pizz-inn)
 
 ## Author's Info
 Name : Gilbert Korir.
@@ -88,5 +89,5 @@ github - [Gilbert K](https://github.com/100jared)
 
 Linkedin - [Gilbert K](https://www.linkedin.com/public-profile/settings)
 
-[Back to the top](#delani-studio)
+[Back to the top](#pizz-inn)
 
