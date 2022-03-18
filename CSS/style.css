@@ -95,6 +95,10 @@
     /* color: white; */
     margin-top: 30px;
   }
+  #pizza, #topping, #crust, #quantity{
+    width: 400px;
+    padding: 4px;
+  }
   .display{
 
     color: orange;

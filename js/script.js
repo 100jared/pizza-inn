@@ -80,7 +80,8 @@ $(document).ready(function(){
         $(".userdeliver").hide();
         $("#neworder").hide();
         $("#myForm").trigger("reset")
-        $("#send").show();
+        // $("#send").show();
+        $(".grandorder").hide();
 
     });
         //final order button 
@@ -119,6 +120,7 @@ $(document).ready(function(){
             // $(".display").append("<h3> Your Total Bill is: " + totalCost +"</h3>")
             
             // confirm("The delivery amount is 180 ")
+            
             var grandTotal = totalCost+180;
     
             // console.log("Your final bill is: " + grandTotal);
