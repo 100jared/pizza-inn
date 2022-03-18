@@ -85,7 +85,8 @@ $(document).ready(function(){
     });
     //final order button 
     $("#finalorder").click(function(e){
-    
+
+        e.preventDefault();
         $("#home").hide();
         $(".display").hide();
         $(".checkout").hide();
@@ -93,20 +94,19 @@ $(document).ready(function(){
         $("#neworder").hide();
         var grandTotal = totalCost + 180;
 
-        let customer = $("input#name").val();
-        let phone = $("input#phone").val();
-        let location = $("input#location").val();
+        var customer = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var location = document.getElementById("place").value;
 
         if (customer == "" || phone == "" || location ==""){
             alert("Fields should not be empty");
-            
-            
+               
           }else{
-            $(".userdeliver").hide();
+            $(".pdelivery").show();
             $(".grandorder").append("Thank you "+ customer +", We have recieved your order details and your request will be delivered to "+location+ 
             ". Prepare sh. "+grandTotal);
           }
-          e.preventDefault();
+
 
     });
 });
