@@ -132,6 +132,15 @@
     #order, #overlay{
       height: auto;
     }
+    .map{
+      width: 100%;
+      margin-left: -200px;
+    }
+    #location{
+      height: auto;
+      width: 100%;
+      text-align: center;
+    }
   }
 
 
