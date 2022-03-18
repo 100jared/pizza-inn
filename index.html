@@ -113,13 +113,33 @@
         </select><br>
        <label for="quantity">Quantity</label><br>
         <input type="number" id="quantity" min="1" required><br><br>
-        <button type="submit" id="send">Place Order</button>
+        <button type="submit" onclick="check()" id="send">Place Order</button>
 
 
       </form>
     </div>
     <div class="col-sm-6">
-    <p id="display"></p>
+      <div class="ourwork">
+        <p>Place your order and pick it or request for Home delivery</p>
+        <p>"Yor happiness is our Wish"</p>
+      </div>
+      <div class="display"></div>
+      <div class="checkout">
+        <h5>Want a home delivery?</h5>
+        <button id="home">Delivery</button><br><br>
+        <button id="grand">Checkout</button>
+      </div>
+
+      <div class="userdeliver">
+        <form action="">
+          <div class="form-group">
+            <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+            <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+            <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+            <button id="grandorder">Place Order</button>
+          </div>
+        </form>
+    </div>
     </div>
   </div>
  </div>

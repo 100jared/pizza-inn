@@ -95,4 +95,10 @@
     /* color: white; */
     margin-top: 30px;
   }
-  
+  .display{
+
+    color: orange;
+  }
+  .userdeliver, #home, #grand, .checkout{
+    display: none;
+  }

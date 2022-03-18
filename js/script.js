@@ -13,6 +13,19 @@ function Pizza(size, crust, topping, quantity){
 $(document).ready(function(){
     $("#send").click(function(event){
         event.preventDefault();
+
+        let mquantity = document.getElementById("quantity").value;
+
+        if(mquantity == ""){
+            alert("choose the quantity")
+        }else{
+            $("#send").hide();
+            $(".checkout").show();
+            $(".display").slideDown();
+            $("#home").slideDown();
+            $("#grand").slideDown();
+        }
+
         function getSize(){
             var sizeCost = document.getElementById("pizza").value;
             return parseInt(sizeCost) 
@@ -31,14 +44,18 @@ $(document).ready(function(){
             return parseInt(myTopping);
           }
           
-// Object for new customer;
+       // Object for new customer;
 
         var newCustomer = new Pizza(getSize(), getCrust(), getTopping(), getNumber());
         
         // Total cost for the new customer:
         var totalCost = ((newCustomer.mySize + newCustomer.myCrust + newCustomer.myTop)*(newCustomer.myQuantity));
-        alert("Your charges are " + totalCost)
-
-    })
+        // alert("Your charges are " + totalCost)
+        $(".display").append("<h3> Your Total Bill is: " + totalCost +"</h3>")
+    });
+    
 
 });
+function clearTextarea() {
+    $("#myForm").reset(); //reset textarea inputs
+  }
