@@ -24,6 +24,7 @@ $(document).ready(function(){
             $(".display").slideDown();
             $("#home").slideDown();
             $("#grand").slideDown();
+            $("#neworder").hide();
         }
 
         function getSize(){
@@ -60,9 +61,51 @@ $(document).ready(function(){
         $(".display").hide();
         $(".checkout").hide();
         $(".userdeliver").show();
-    })
-    
+        $("#neworder").hide();
+    });
 
+    // checkout button details
+    $("#grand").click(function(){
+        $("#home").hide();
+        $(".display").show();
+        $(".checkout").hide();
+        $(".userdeliver").hide();
+        $("#neworder").show();
+    });
+    //new order
+    $("#neworder").click(function(){
+        $("#home").hide();
+        $(".display").hide();
+        $(".checkout").hide();
+        $(".userdeliver").hide();
+        $("#neworder").hide();
+        $("#myForm").trigger("reset")
+        $("#send").show();
+
+    });
+    //final order button 
+    $("#grandorder").click(function(e){
+        e.preventDefault();
+
+        var grandTotal = totalCost + 180;
+        $("#home").hide();
+        $(".display").hide();
+        $(".checkout").hide();
+        $(".userdeliver").hide();
+        $("#neworder").hide();
+
+        let customer = $("input#name").val();
+        let phone = $("input#phone").val();
+        let location = $("input#location").val();
+
+        if ($("input#name").val() || $("input#phone").val() || $("input#location").val() ==""){
+            alert("Fields should not be empty");
+            
+          }else{
+
+          }
+
+    });
 });
 function clearTextarea() {
     $("#myForm").reset(); //reset textarea inputs

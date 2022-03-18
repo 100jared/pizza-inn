@@ -99,6 +99,6 @@
 
     color: orange;
   }
-  .userdeliver, #home, #grand, .checkout{
+  .userdeliver, #home, #grand, .checkout, #neworder{
     display: none;
   }
