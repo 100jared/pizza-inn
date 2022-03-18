@@ -117,15 +117,24 @@
   .userdeliver, #home, #grand, .checkout, #neworder, .pdelivery{
     display: none;
   }
+  .imall{
+    margin-left: 180px;
+  }
   .grandorder{
     color: green;
   }
 
   @media only screen and (max-width: 400px){
+    .nav, .head, .word{
+      height: auto;
+    }
+    .word h2{
+      margin-top: 30px;
+    }
     .imall{
       height: 200px;
       width: 300px;
-      margin-left: -200px;
+      margin-left: 0px;
       text-align: center;
 
     }
