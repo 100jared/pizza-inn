@@ -53,6 +53,14 @@ $(document).ready(function(){
         // alert("Your charges are " + totalCost)
         $(".display").append("<h3> Your Total Bill is: " + totalCost +"</h3>")
     });
+
+    //delivery location
+    $("#home").click(function(){
+        $("#grand").hide();
+        $(".display").hide();
+        $(".checkout").hide();
+        $(".userdeliver").show();
+    })
     
 
 });
