@@ -130,22 +130,21 @@
         <button id="home">Delivery</button><br><br>
         <button id="grand">Checkout</button>
       </div><br>
-      <a href="#myForm"><button id="neworder">place a new order</button></a>
 
       <div class="userdeliver">
         <form action="">
           <p>Enter your details below:</p>
           <div class="form-group">
-            <input type="text" id="name" class="form-control mb-3" placeholder="Your name...">
-            <input type="number" id="phone" class="form-control mb-3" placeholder="Functioning phone number">
-            <input type="text" id="place" class="form-control mb-3" placeholder="where are you located?">
-            <button id="finalorder">Order</button>
+            <input type="text" id="name" class="form-control mb-3" value="" placeholder="Your name..." required>
+            <input type="number" id="phone" class="form-control mb-3" value="" placeholder="Functioning phone number" required>
+            <input type="text" id="place" class="form-control mb-3" value="" placeholder="where are you located?" required>
+            <button id="finalorder" onclick="amount()">Order</button>
           </div>
         </form>
-    </div>
+    </div>  
     <h4 class="pdelivery">Your Final Bill plus delivery will be:</h4>
     <p class="grandorder"></p>
-  
+    <a href="#myForm"><button id="neworder">place a new order</button></a>
     </div>
   </div>
  </div>

@@ -14,7 +14,7 @@ $(document).ready(function(){
     $("#send").click(function(event){
         event.preventDefault();
 
-        let mquantity = document.getElementById("quantity").value;
+        var mquantity = document.getElementById("quantity").value;
 
         if(mquantity == ""){
             alert("choose the quantity")
@@ -83,33 +83,65 @@ $(document).ready(function(){
         $("#send").show();
 
     });
-    //final order button 
-    $("#finalorder").click(function(e){
+        //final order button 
+        $("#finalorder").click(function(event){
+            event.preventDefault();
+            $("#home").hide();
+            $(".display").hide();
+            $(".checkout").hide();
+            // $(".userdeliver").hide();
 
-        e.preventDefault();
-        $("#home").hide();
-        $(".display").hide();
-        $(".checkout").hide();
-        $(".userdeliver").hide();
-        $("#neworder").hide();
-        var grandTotal = totalCost + 180;
-
-        var customer = document.getElementById("name").value;
-        var phone = document.getElementById("phone").value;
-        var location = document.getElementById("place").value;
-
-        if (customer == "" || phone == "" || location ==""){
-            alert("Fields should not be empty");
-               
-          }else{
-            $(".pdelivery").show();
-            $(".grandorder").append("Thank you "+ customer +", We have recieved your order details and your request will be delivered to "+location+ 
-            ". Prepare sh. "+grandTotal);
-          }
-
-
-    });
+            function getSize(){
+                var sizeCost = document.getElementById("pizza").value;
+                return parseInt(sizeCost) 
+            }
+            function getCrust(){
+                var crustCost = document.getElementById("crust").value;
+                return parseInt(crustCost) 
+            }
+            function getNumber(){
+                var myNumber = document.getElementById("quantity").value;
+                return parseInt(myNumber) 
+            }
+            
+            function getTopping() {
+                var myTopping = document.getElementById("topping").value;
+                return parseInt(myTopping);
+              }
+              
+           // Object for new customer;
+    
+            var newCustomer = new Pizza(getSize(), getCrust(), getTopping(), getNumber());
+            
+            // Total cost for the new customer:
+            var totalCost = ((newCustomer.mySize + newCustomer.myCrust + newCustomer.myTop)*(newCustomer.myQuantity));
+            // alert("Your charges are " + totalCost)
+            // $(".display").append("<h3> Your Total Bill is: " + totalCost +"</h3>")
+            
+            // confirm("The delivery amount is 180 ")
+            var grandTotal = totalCost+180;
+    
+            // console.log("Your final bill is: " + grandTotal);
+            let customer = $("input#name").val();
+            let phone = $("input#phone").val();
+            let area = $("input#place").val();
+    
+            if ($("input#name").val() && $("input#phone").val() && $("input#place").val()!=""){
+      
+                $(".grandorder").append('<h3>'+ customer+", We have recieved your order and it will be delivered to you at "+area+ ". Prepare sh. "+grandTotal +'<h3>');
+                 // $("#totalbill").hide();
+                 $(".grandorder").slideDown(1000);
+                 $(".userdeliver").hide();
+                 $("#neworder").show();
+              }
+              else {
+                alert("Please fill in the details for delivery!");
+                $(".userdeliver").show();
+                // $("button#final-order").show();
+              }
+            
+        });
+        
 });
-function clearTextarea() {
-    $("#myForm").reset(); //reset textarea inputs
-  }
+
+
