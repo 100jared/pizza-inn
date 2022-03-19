@@ -7,6 +7,11 @@ function Pizza(size, crust, topping, quantity){
     this.myTop = topping;
     this.myQuantity = quantity;
 }
+//prototype
+Pizza.prototype.totalCost = function(){
+    return (mySize + myCrust + myTop)*(myQuantity)
+}
+
 
 //User interface
 //submit button
