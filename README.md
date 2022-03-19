@@ -23,7 +23,7 @@
 <p align="center">This is a simple Pizza webpage that uses objects in making orders and making basic calculation on delvery and the type of Pizza the user will choose Bootstrap Jquery JS
 The project will make use of jquery library to make the page dynamic and more responsive with bootstrap</p>
 
-<p align="center"><img src="https://github.com/100jared/pizza-inn/blob/master/images/pizzain.jpg" height="300px" width = "70%"> </p>
+<p align="center"><img src="https://github.com/100jared/pizza-inn/blob/master/images/backgroung/pizrd.jpg" height="300px" width = "70%"> </p>
   
  ---
 
