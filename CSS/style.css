@@ -124,8 +124,12 @@
   .grandorder{
     color: green;
   }
-  .map{position:relative;text-align:right;height:180px;width:600px;}
-  #themap {background:none!important;height:180px;width:450px;}
+  /* .map{position:relative;text-align:right;height:300px;width:100px;} */
+  #themap {background:none!important;height:300px;width:700px;}
+
+  .map-l{
+    margin-left: 300px;
+  }
   
   @media only screen and (max-width: 400px){
     .nav, .head, .word{
