@@ -24,6 +24,7 @@
   font-size: 30px;
   padding-top: 25px;
   font-family: 'Caveat', cursive;
+  /* background-color: orange; */
 }
 .nav a{
   color: white;
@@ -123,7 +124,9 @@
   .grandorder{
     color: green;
   }
-
+  .map{position:relative;text-align:right;height:180px;width:600px;}
+  #themap {background:none!important;height:180px;width:450px;}
+  
   @media only screen and (max-width: 400px){
     .nav, .head, .word{
       height: auto;
@@ -143,7 +146,7 @@
     }
     .map{
       width: 100%;
-      margin-left: -200px;
+      margin-left: 0px;
     }
     #location{
       height: auto;
