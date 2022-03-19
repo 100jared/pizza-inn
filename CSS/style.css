@@ -24,7 +24,7 @@
   font-size: 30px;
   padding-top: 25px;
   font-family: 'Caveat', cursive;
-  /* background-color: orange; */
+  background-color: orange;
 }
 .nav a{
   color: white;
@@ -130,6 +130,9 @@
   .map-l{
     margin-left: 300px;
   }
+  #contact{
+    background-color: orange;
+  }
   
   @media only screen and (max-width: 400px){
     .nav, .head, .word{
@@ -156,6 +159,9 @@
       height: auto;
       width: 100%;
       text-align: center;
+    }
+    #orderbtn{
+      margin-left: 70px;
     }
   }
 
