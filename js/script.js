@@ -18,7 +18,8 @@ $(document).ready(function(){
 
         if(mquantity == ""){
             alert("choose the quantity")
-        }else{
+        }
+        else{
             $("#send").hide();
             $(".checkout").show();
             $(".display").slideDown();
