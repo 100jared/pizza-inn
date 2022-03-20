@@ -51,8 +51,8 @@ $(document).ready(function(){
             var myTopping = document.getElementById("topping").value;
             return parseInt(myTopping);
           }
-          var gOrder = 1;
-          var gCost = 0;
+        //   var gOrder = 1;
+        //   var gCost = 0;
           
        // Object for new customer;
 
@@ -141,7 +141,7 @@ $(document).ready(function(){
     
             if ($("input#name").val() && $("input#phone").val() && $("input#place").val()!=""){
       
-                $(".grandorder").append('<h3>'+ customer+ "You have ordered " + newCustomer.myQuantity +" pizza, for " + totalCost + " We have recieved your order and it will be delivered to you at "+area+ ". Prepare sh. "+grandTotal +'<h3>');
+                $(".grandorder").append('<h3>'+ customer +" "+ " You have ordered " + newCustomer.myQuantity +" pizza, for " + totalCost + " We have recieved your order and it will be delivered to you at "+area+ ". Prepare sh. "+grandTotal +'<h3>');
                  // $("#totalbill").hide();
                  $(".grandorder").slideDown(1000);
                  $(".userdeliver").hide();
