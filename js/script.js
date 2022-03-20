@@ -1,11 +1,12 @@
 //Business logic
 //constructor
 
-function Pizza(size, crust, topping, quantity){
+function Pizza(size, crust, topping, quantity,total){
     this.mySize = size;
     this.myCrust = crust;
     this.myTop = topping;
     this.myQuantity = quantity;
+    this.total = total;
 }
 //prototype
 Pizza.prototype.totalCost = function(){
@@ -50,6 +51,8 @@ $(document).ready(function(){
             var myTopping = document.getElementById("topping").value;
             return parseInt(myTopping);
           }
+          var gOrder = 1;
+          var gCost = 0;
           
        // Object for new customer;
 
@@ -58,7 +61,9 @@ $(document).ready(function(){
         // Total cost for the new customer:
         var totalCost = ((newCustomer.mySize + newCustomer.myCrust + newCustomer.myTop)*(newCustomer.myQuantity));
         // alert("Your charges are " + totalCost)
-        $(".display").append("<h3> Your Total Bill is: " + totalCost +"</h3>")
+        // let newCost = 0;
+        // var newCost = newCost + totalCost
+        $(".display").append("<h3> You have ordered " + newCustomer.myQuantity +" Pizza and your Total Bill is: " + totalCost +"</h3>")
     });
 
     //delivery location
@@ -86,7 +91,7 @@ $(document).ready(function(){
         $(".userdeliver").hide();
         $("#neworder").hide();
         $("#myForm").trigger("reset")
-        // $("#send").show();
+        $("#send").show();
         $(".grandorder").hide();
 
     });
@@ -136,7 +141,7 @@ $(document).ready(function(){
     
             if ($("input#name").val() && $("input#phone").val() && $("input#place").val()!=""){
       
-                $(".grandorder").append('<h3>'+ customer+", We have recieved your order and it will be delivered to you at "+area+ ". Prepare sh. "+grandTotal +'<h3>');
+                $(".grandorder").append('<h3>'+ customer+ "You have ordered " + newCustomer.myQuantity +" pizza, for " + totalCost + " We have recieved your order and it will be delivered to you at "+area+ ". Prepare sh. "+grandTotal +'<h3>');
                  // $("#totalbill").hide();
                  $(".grandorder").slideDown(1000);
                  $(".userdeliver").hide();
@@ -152,4 +157,56 @@ $(document).ready(function(){
         
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //Add pizza
+// $("#add").click(function(){
+//     $("#grand").hide();
+//     $(".display").hide();
+//     $(".checkout").hide();
+//     // $(".userdeliver").show();
+//     $("#neworder").hide();
+
+//     var sizeCost = document.getElementById("pizza").value;
+//     var myNumber = document.getElementById("quantity").value;
+//     var myTopping = document.getElementById("topping").value;
+//     var crustCost = document.getElementById("crust").value;
+//     var total = (parseInt(sizeCost) + parseInt(crustCost) + parseInt(myTopping))*(myNumber);
+//     gOrder = gOrder + 1;
+//     gCost = gCost + total;
+
+//     var newPizza = new Pizza(sizeCost, myNumber, myTopping, crustCost, total, gOrder);
+
+
+
+// });
 
